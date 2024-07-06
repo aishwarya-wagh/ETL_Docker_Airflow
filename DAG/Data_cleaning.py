@@ -4,7 +4,7 @@ import pandas as pd
 pd.set_option('display.max_columns',100)
 
 # Read data
-df = pd.read_csv('/opt/airflow/dags/Wine.csv')
+df = pd.read_csv('Wine.csv')
 #print(df.head()) # Successful
 
 # Data Quality Analysis
@@ -24,4 +24,4 @@ df['id'] = [i for i in range(len(df))]
 print(df.info())
 
 # Store new csv in the dags directory
-df.to_csv('/opt/airflow/dags/wine_cleaned.csv',index=False)
+df.to_csv('wine_cleaned.csv',index=False)
